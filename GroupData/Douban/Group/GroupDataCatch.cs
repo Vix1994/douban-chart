@@ -31,7 +31,7 @@ namespace DataCatch.Douban.Group
 
                 var data = await ApiGet(apiUrl);
 
-                FileSave(data);
+                FileSave(data, groupId.ToString());
                 Log.Info("File saved.");
             }
         }

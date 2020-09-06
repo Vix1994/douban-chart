@@ -67,10 +67,11 @@ namespace DataCatch.Douban.Base
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public void FileSave(string data)
+        public void FileSave(string data, string folder)
         {
             var subPath = Path.Combine(
                     BasePath,
+                    folder,
                     DateTime.Now.ToString("yyyy-MM-dd"));
 
             Directory.CreateDirectory(subPath);
