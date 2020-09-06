@@ -1,0 +1,17 @@
+{
+  "api": {
+    "douban-group": {
+      "info": "https://api.douban.com/v2/group/:groupId/",
+      "members": "https://api.douban.com/v2/group/:groupId/members",
+      "topics": "https://api.douban.com/v2/group/:groupId/topics",
+      "topicInfo": "https://api.douban.com/v2/group/topic/:topicId/",
+      "comments": "https://api.douban.com/v2/group/topic/:topicId/comments"
+    }
+  },
+  "params": {
+    "douban-group-list": [
+      691911
+    ]
+  },
+  "version": "0.0.1"
+}
