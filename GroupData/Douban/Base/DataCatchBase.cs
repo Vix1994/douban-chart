@@ -65,26 +65,33 @@ namespace DataCatch.Douban.Base
         /// <summary>
         /// file save
         /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        public void FileSave(string data, string folder)
+        /// <param name="data">path, data</param>
+        /// <param name="fileName"></param>
+        public void FileSave(Dictionary<string, string> data, string fileName)
         {
-            var subPath = Path.Combine(
-                    BasePath,
-                    folder,
-                    DateTime.Now.ToString("yyyy-MM-dd"));
+            var tasks = new List<Task>();
+            foreach (var pairs in data)
+            {
+                Directory.CreateDirectory(
+                    Path.Combine(BasePath, pairs.Key));
 
-            Directory.CreateDirectory(subPath);
+                var filePath = Path.Combine(BasePath, pairs.Key, fileName);
+                tasks.Add(new Task(async () =>
+                    await File.WriteAllTextAsync(
+                            filePath,
+                            pairs.Value
+                    )
+                ));
+            }
 
-            var task = new Task(async () =>
-                await File.WriteAllTextAsync(
-                    Path.Combine(
-                        subPath,
-                        $"{DateTime.Now:yyyyMMdd_HHmmss}.json"),
-                    data)
-            );
+            tasks.Add(new Task(async () =>
+                await Task.WhenAll(tasks)
+                    .ContinueWith(t =>
+                        Log.Info($"{data.Count} files saved")
+                    )
+            ));
 
-            task.Start();
+            tasks.ForEach(t => t.Start());
         }
     }
 }
