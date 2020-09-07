@@ -57,6 +57,10 @@ namespace DataCatch.Common
         [JsonPropertyName("api")]
         public Api Apis { get; set; }
         /// <summary>
+        /// 进程
+        /// </summary>
+        public string[][] Process { get; set; }
+        /// <summary>
         /// 版本号
         /// </summary>
         public string Version { get; set; }

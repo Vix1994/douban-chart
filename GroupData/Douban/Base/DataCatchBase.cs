@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace DataCatch.Douban.Base
@@ -11,7 +10,7 @@ namespace DataCatch.Douban.Base
     /// <summary>
     /// 数据抓取基础实现
     /// </summary>
-    public abstract class DataCatchBase
+    public abstract class DataCatchBase : IProcess
     {
         /// <summary>
         /// 日志路径
@@ -22,14 +21,9 @@ namespace DataCatch.Douban.Base
             Log.Info("Douban process start");
             try
             {
-                var debugCount = 0;
-                while (true)
-                {
-                    Log.Info("Douban process start datacatching");
-                    await Catch();
-                    Log.Debug($"Douban process has run for {++debugCount} times");
-                    Thread.Sleep(1000 * 60 * 5);
-                }
+                Log.Info("Douban process start datacatching");
+                await Catch();
+                Log.Info("Finished");
             }
             catch (Exception e)
             {
