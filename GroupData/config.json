@@ -29,7 +29,8 @@
     ]
   },
   "Process": [
-    [ "DataCatch", "DataCatch.Douban.Group.GroupDataCatch", "0/5 * * * *" ]
+    [ "DataCatch", "DataCatch.Douban.Group.GroupDataCatch", "0/5 * * * *" ],
+    [ "DataCatch", "DataCatch.Common.WriteLog", "0 0/1 * * *" ]
   ],
   "version": "1.3.7"
 }
