@@ -77,6 +77,10 @@ namespace DataCatch.Common
         [JsonPropertyName("douban-group")]
         [JsonConverter(typeof(JsonSpecificConverter))]
         public Dictionary<ApiType, String> DoubanGroup { get; set; }
+        /// <summary>
+        /// EmojiAll
+        /// </summary>
+        public string EmojiAll { get; set; }
     }
 
     /// <summary>

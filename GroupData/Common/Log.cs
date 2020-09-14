@@ -28,6 +28,7 @@ namespace DataCatch.Common
 
     public class WriteLog : IProcess
     {
+        public static bool IsRunning { get; set; }
         /// <summary>
         /// 输出日志到目录
         /// </summary>

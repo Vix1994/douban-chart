@@ -6,7 +6,8 @@
       "topics": "https://api.douban.com/v2/group/:groupId/topics",
       "topicInfo": "https://api.douban.com/v2/group/topic/:topicId/",
       "comments": "https://api.douban.com/v2/group/topic/:topicId/comments"
-    }
+    },
+    "emojiall": "https://www.emojiall.com/zh-hans/list"
   },
   "params": {
     "douban-group-list": [
@@ -30,7 +31,8 @@
   },
   "Process": [
     [ "DataCatch", "DataCatch.Douban.Group.GroupDataCatch", "0/5 * * * *" ],
-    [ "DataCatch", "DataCatch.Common.WriteLog", "0 0/1 * * *" ]
+    [ "DataCatch", "DataCatch.Common.WriteLog", "0 0/1 * * *" ],
+    [ "DataCatch", "DataCatch.Emoji.EmojiAll", "* * * 9/12 *" ]
   ],
   "version": "1.3.7"
 }

@@ -16,11 +16,18 @@ namespace DataCatch.Douban.Base
         /// 日志路径
         /// </summary>
         private static readonly string BasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "douban");
+        public static bool IsRunning { get; set; }
         public async Task Start()
         {
+            if (IsRunning)
+            {
+                Log.Info("This process is running");
+                return;
+            }
             Log.Info("Douban process start");
             try
             {
+                IsRunning = true;
                 Log.Info("Douban process start datacatching");
                 await Catch();
                 Log.Info("Finished");
@@ -29,6 +36,7 @@ namespace DataCatch.Douban.Base
             {
                 Log.Error(e.ToString());
             }
+            IsRunning = false;
         }
 
         /// <summary>

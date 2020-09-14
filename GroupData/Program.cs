@@ -1,6 +1,5 @@
 ﻿using DataCatch.Common;
 using DataCatch.Douban.Base;
-using DataCatch.Douban.Group;
 using Hangfire;
 using Hangfire.MemoryStorage;
 using System;

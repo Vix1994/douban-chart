@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCatch", "GroupData\DataCatch.csproj", "{8CC19936-A676-4EBC-954B-DE7C85638718}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataCatch", "GroupData\DataCatch.csproj", "{8CC19936-A676-4EBC-954B-DE7C85638718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCharts", "DataCharts\DataCharts.csproj", "{A1C44F40-9002-4BC1-BE15-16CAB0BEF115}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8CC19936-A676-4EBC-954B-DE7C85638718}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CC19936-A676-4EBC-954B-DE7C85638718}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CC19936-A676-4EBC-954B-DE7C85638718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1C44F40-9002-4BC1-BE15-16CAB0BEF115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1C44F40-9002-4BC1-BE15-16CAB0BEF115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1C44F40-9002-4BC1-BE15-16CAB0BEF115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1C44F40-9002-4BC1-BE15-16CAB0BEF115}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

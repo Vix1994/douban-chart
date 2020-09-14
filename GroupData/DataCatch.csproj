@@ -8,6 +8,8 @@
   <ItemGroup>
     <PackageReference Include="Hangfire.AspNetCore" Version="1.7.12" />
     <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.24" />
+    <PackageReference Include="PinYinConverterCore" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>
