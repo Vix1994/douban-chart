@@ -139,7 +139,7 @@ namespace DataCatch.Emoji
             var data = new List<string>();
             foreach (var e in emos)
             {
-                data.Add($"{e.Pinyin.Replace("'", "")} {e.Emotion} 5");
+                data.Add($"{e.Pinyin.Replace("'", "")}=5,{e.Emotion}");
             }
 
             Directory.CreateDirectory(BasePath);
