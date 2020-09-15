@@ -47,7 +47,7 @@ namespace DataCatch.Emoji
             Log.Info("Process Emoji is starting");
 
             var emojis = new List<Emoji>();
-            for (int i = 1; i < 15; i++)
+            for (int i = 0; i < 15; i++)
             {
                 var url = GetApiUrl(new Dictionary<string, string> { { "page", $"{i}" } });
                 Log.Debug($"Emoji current api url: {url}");
